@@ -29,3 +29,10 @@ def get_ability_enum(base_url: str) -> Enum:
 
     # Return the Enum object representing the abilities
     return Ability
+
+if __name__ == "__main__":
+    repo = 'pagefaultgames/pokerogue/main'
+    base = f'https://raw.githubusercontent.com/{repo}'
+    ability = get_ability_enum(base)
+    print([e.name for e in ability])
+    print([e.value for e in ability])
